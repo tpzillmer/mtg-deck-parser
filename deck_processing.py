@@ -112,7 +112,10 @@ def parseDeck(deck):
                 if(len(cardTypes)==1):
                     cardType = cardTypes[0]
                 else:
-                    cardType = cardTypes[1]
+                    if cardTypes[0] == 'Land':
+                        cardType = 'Land'
+                    else:
+                        cardType = cardTypes[1]
 
                 cardColor = cards.colors
                 cardCost = cards.cmc
